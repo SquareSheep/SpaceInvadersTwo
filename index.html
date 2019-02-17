@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type = "text/javascript" src="images.js"></script>
+		<script type = "text/javascript" src="classes.js"></script>
+		<script type = "text/javascript" src="main.js"></script>
+		<script type = "text/javascript" src="functions.js"></script>
+		<style>
+			body {
+			background-color:rgba(0,0,0,1);
+			}
+			#ctxCanvas {
+				width:700px;
+				height:700px;
+				position:absolute;
+				top:3%;
+				left:25%;
+				z-index:2;
+				padding-left: 0px;
+				padding-right: 0px;
+				display:block;
+				image-rendering: optimizeSpeed;
+			  image-rendering: -moz-crisp-edges;
+			  image-rendering: -webkit-optimize-contrast;
+			  image-rendering: -o-crisp-edges;
+			  image-rendering: pixelated;
+			  -ms-interpolation-mode: nearest-neighbor;
+			}
+			#otherCanvas {
+				width:700px;
+				height:700px;
+			}
+			#backCanvas {
+				position:absolute;
+				left:0px;
+				top:0px;
+				z-index:1;
+			}
+			#foreCanvas {
+				width:700px;
+				height:700px;
+				position:absolute;
+				left:25%;
+				top:3%;
+				z-index:3;
+				padding-left: 0px;
+				padding-right: 0px;
+				display:block;
+				image-rendering: optimizeSpeed;
+			  image-rendering: -moz-crisp-edges;
+			  image-rendering: -webkit-optimize-contrast;
+			  image-rendering: -o-crisp-edges;
+			  image-rendering: pixelated;
+			  -ms-interpolation-mode: nearest-neighbor;
+			}
+			body {
+				overflow:hidden;
+			}
+		</style>
+	</head>
+	<body onload = "start()" onmousedown = "mouseDown(event)" onmouseup = "mouseUp(event)">
+		<canvas id = "foreCanvas" overflow = "hidden"></canvas>
+		<canvas id = "ctxCanvas" overflow = "hidden"></canvas>
+		<canvas id = "otherCanvas"></canvas>
+		<canvas id = "backCanvas" overflow = "hidden"></canvas>
+	</body>
+</html>
